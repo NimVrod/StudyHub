@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="46f77958-a89f-4ae8-8b30-61d0438a5934" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/StudyHub.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudyHub/StudyHub/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudyHub/StudyHub/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudyHub/StudyHub/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudyHub/StudyHub/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudyHub/StudyHub/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StudyHub/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyHub/quizes/files/quiz_detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyHub/quizes/files/quiz_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyHub/quizes/files/quiz_index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyHub/quizes/files/quiz_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyHub/quizes/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudyHub/quizes/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/StudyHub.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StudyHub.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyHub/StudyHub/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/StudyHub/StudyHub/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyHub/StudyHub/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/StudyHub/StudyHub/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyHub/quizes/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/StudyHub/quizes/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyHub/quizes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/StudyHub/quizes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudyHub/quizes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/StudyHub/quizes/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,9 +58,31 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Github\StudyHub\StudyHub\quizes\migrations" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="quiz_index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/StudyHub/StudyHub/quizes/migrations/quiz_index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.quiz_index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -48,6 +93,23 @@
       <option name="presentableId" value="Default" />
       <updated>1644854900128</updated>
       <workItem from="1644854901787" duration="427000" />
+      <workItem from="1645001311213" duration="132000" />
+      <workItem from="1645097896626" duration="1882000" />
+      <workItem from="1645184062158" duration="273000" />
+      <workItem from="1645212891992" duration="16000" />
+      <workItem from="1645361287737" duration="3206000" />
+      <workItem from="1645379729060" duration="3125000" />
+      <workItem from="1645527105747" duration="525000" />
+      <workItem from="1645531820850" duration="1502000" />
+      <workItem from="1645538955501" duration="16000" />
+      <workItem from="1645543460609" duration="1734000" />
+      <workItem from="1645545830064" duration="82000" />
+      <workItem from="1645552212022" duration="10000" />
+      <workItem from="1645552240879" duration="13000" />
+      <workItem from="1645552402747" duration="654000" />
+      <workItem from="1645554245002" duration="2028000" />
+      <workItem from="1645561623937" duration="2126000" />
+      <workItem from="1645633536620" duration="19000" />
     </task>
     <servers />
   </component>
