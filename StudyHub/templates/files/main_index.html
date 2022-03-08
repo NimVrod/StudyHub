@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation page</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="main_index.css">
+</head>
+
+<script>
+    let nav = null;
+    let is_open = false;
+    $(document).ready(function(){
+        nav = document.getElementById("navbar");
+    });
+
+    function move(item){
+        if (is_open){
+            $(item).animate({width: 0}, 500, function(){
+                $(item).hide()
+            })
+            is_open = false;
+        }
+        else{
+            item.style.display = "flex";
+            $(item).animate({width: '10%'})
+            is_open = true;
+        }
+
+    }
+</script>
+
+<body>
+    <button class="show_nav" onclick="move(nav)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z"/></svg></button>
+    <nav id="navbar">
+        <ul id="navbar-container">
+            <li><button class="show_nav" onclick="move(nav)"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 22h-4v-4h4v4zm0-12h-4v4h4v-4zm0-8h-4v4h4v-4zm3 0v4h17v-4h-17zm0 12h17v-4h-17v4zm0 8h17v-4h-17v4z"/></svg></button>
+                <p class="logo_text">StudyHub</p>
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=7_Ckru1IQXM">Youtube link</a></li>
+            <li><p>test</p></li>
+            <li><p>test</p></li>
+            <li><p>test</p></li>
+        </ul>
+
+    </nav>
+</body>
+</html>

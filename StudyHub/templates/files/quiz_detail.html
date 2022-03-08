@@ -5,12 +5,13 @@
     <title>Detailed view</title>
 </head>
 
-<link rel="stylesheet" href="quiz_detail.css">
+{% load static %}
+<link rel="stylesheet" href="{% static 'files/quiz_detailed.css' %}">
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 <script>
 
-    function is_correct(item){
+    function is_correct(name){
         return true
     }
 
@@ -38,8 +39,9 @@
     })
 
 
-    async function next(item){
-        if (is_correct(item)){
+    async function next(item, name){
+        console.log(name)
+        if (name){
             let l = item.parentElement.parentElement
             $(l).fadeOut("slow")
             await sleep(500)
@@ -54,11 +56,11 @@
         }
         else{
             let l = item.parentElement.parentElement
-            await sleep(1000)
             $(l).fadeOut("slow")
-            $(incorrect).fadeIn("fast")
             await sleep(500)
-            $(incorrect).hide()
+            $(incorrect).fadeIn("slow")
+            await sleep(1000)
+            $(incorrect).fadeOut("fast")
             current++;
             await sleep(1000)
             $(pytania[current]).fadeIn("slow");
@@ -86,36 +88,18 @@
             <p>Wow dobra odpowiedz!</p>
         </div>
         <div id="zla" class="is_correct">
-            <p>Wow dobra odpowiedz!</p>
+            <p>Zła odpowiedź debliu!</p>
         </div>
-
-        <section class="question">
-            <h1 class="title">Question name</h1>
-            <div class="answer_container">
-                <button class="answer" onclick="next(this)">Answer 1</button>
-                <button class="answer" onclick="next(this)">Answer 2</button>
-                <button class="answer" onclick="next(this)">Answer 3</button>
-                <button class="answer" onclick="next(this)">Answer 4</button>
-            </div>
-        </section>
-        <section class="question">
-            <h1 class="title">Question name</h1>
-            <div class="answer_container">
-                <button class="answer" onclick="next(this)">Answer 1</button>
-                <button class="answer" onclick="next(this)">Answer 2</button>
-                <button class="answer" onclick="next(this)">Answer 3</button>
-                <button class="answer" onclick="next(this)">Answer 4</button>
-            </div>
-        </section>
-        <section class="question">
-            <h1 class="title">Question name</h1>
-            <div class="answer_container">
-                <button class="answer" onclick="next(this)">Answer 1</button>
-                <button class="answer" onclick="next(this)">Answer 2</button>
-                <button class="answer" onclick="next(this)">Answer 3</button>
-                <button class="answer" onclick="next(this)">Answer 4</button>
-            </div>
-        </section>
+        {% for question in quiz.pytanie_set.all %}
+            <section class="question">
+                <h1 class="title">{{question.name}}</h1>
+                <div class="answer_container">
+                    {% for choice in question.odpowiedz_set.all %}
+                        <button class="answer" onclick="next(this, ({{choice.is_correct|yesno:"true,false"}}))">{{choice.name}}</button>
+                    {%endfor%}
+                </div>
+            </section>
+        {%endfor%}
 
 
 

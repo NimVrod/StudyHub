@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quizes</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'files/quiz_index.css' %}">
+</head>
+
+<body>
+    <nav>
+        <img src="https://ata43.files.wordpress.com/2020/06/cropped-screenshot_2020_0626_085635-1.png" id="logo">
+        <p style="color: white;">Link kiedyś</p>
+    </nav>
+    <main>
+        <div class="content-container">
+            {% for quiz in list %}
+                <a class="content" href="/quizes/{{quiz.id}}">{{quiz.name}}</a>
+            {% endfor %}
+        </div>
+
+    </main>
+
+</body>
+</html>

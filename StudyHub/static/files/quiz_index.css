@@ -1,0 +1,47 @@
+nav{
+    display: flex;
+    text-align: center;
+}
+
+#logo{
+    height: 100px;
+}
+
+.content-container{
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: orange;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    height: 200px;
+    transition: 0.15s;
+    margin: 1px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.content:hover{
+    background: orangered;
+    transform: scale(1.02);
+}
+
+body{
+    background-color: black;
+}
+
+mark.red{
+    color: red;
+    background: none;
+}
+mark.black{
+    color: black;
+    background: none;
+}
