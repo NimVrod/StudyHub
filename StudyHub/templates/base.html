@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Title{% endblock %}</title>
+    <link rel="stylesheet" href="base.css">
+
+<script src="particles.js"></script>
+<script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('callback - particles.js config loaded');
+});
+</script>
+
+<script>
+    function show_nav(){
+        let nav = document.getElementById("sidebar");
+        if (nav.style.transform === "scaleX(0)"){
+            nav.style.transform = "scaleX(1)";
+        }
+        else{
+            nav.style.transform = "scaleX(0)";
+        }
+
+    }
+</script>
+
+<body>
+    <div id="particles-js"></div>
+
+    <img src="https://ata43.files.wordpress.com/2020/06/cropped-screenshot_2020_0626_085635-1.png" id="logo" alt="logo">
+    <div id="sidebar">
+        <ul>
+            <li>
+                <a href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+                    <span class="text">Test</span>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 50 50"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+                    <span class="text">Test</span>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+                    <span class="text">Test</span>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+                    <span class="text">Test</span>
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+                    <span class="text">Test</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    {% block content %}{% endblock %}
+</body>
+</html>

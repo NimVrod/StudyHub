@@ -6,6 +6,7 @@ import datetime
 class quiz(models.Model):
     name = models.CharField(max_length=200)
     pub_date = models.DateField("date_published", default=django.utils.timezone.now())
+    views = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detailed view</title>
+</head>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'quizes/quiz_detailed.css' %}">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+
+    function is_correct(name){
+        return true
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    let current = 0
+    let pytania = null
+    let correct_answers = 0
+    let correct = null
+    let incorrect = null
+
+
+    $(document).ready(function(){
+        console.log("hello team")
+        pytania = document.getElementsByClassName("question");
+        $(pytania).each(function(){
+            this.style.display = "none"
+        })
+        pytania[0].style.display = ""
+        correct = document.getElementById("dobra")
+        incorrect = document.getElementById("zla")
+
+    })
+
+
+    async function next(item, name){
+        console.log(name)
+        if (name){
+            let l = item.parentElement.parentElement
+            $(l).fadeOut("slow")
+            await sleep(500)
+            $(correct).fadeIn("slow")
+            await sleep(1000)
+            $(correct).fadeOut("fast")
+            correct_answers++
+            current++;
+            await sleep(1000)
+            $(pytania[current]).fadeIn("slow");
+
+        }
+        else{
+            let l = item.parentElement.parentElement
+            $(l).fadeOut("slow")
+            await sleep(500)
+            $(incorrect).fadeIn("slow")
+            await sleep(1000)
+            $(incorrect).fadeOut("fast")
+            current++;
+            await sleep(1000)
+            $(pytania[current]).fadeIn("slow");
+        }
+
+        if (current > pytania.length - 1){
+            //window.alert("Wow skończyłeś!, dobrych odpowiedzi: " + correct_answers + "/" + pytania.length)
+            console.log("koniec")
+            let wygrana = document.getElementById("end")
+            wygrana.innerText = "Wow skończyłeś! Dobrych odpowiedzi: " + correct_answers + "/" + pytania.length
+            $(wygrana).fadeIn("fast")
+        }
+    }
+
+</script>
+
+<body>
+    <nav>
+        <img src="https://ata43.files.wordpress.com/2020/06/cropped-screenshot_2020_0626_085635-1.png" id="logo" alt="ok">
+        <p style="color: white;">Link kiedyś</p>
+    </nav>
+
+    <main>
+        <div id="dobra" class="is_correct">
+            <p>Wow dobra odpowiedz!</p>
+        </div>
+        <div id="zla" class="is_correct">
+            <p>Zła odpowiedź debliu!</p>
+        </div>
+        {% for question in quiz.pytanie_set.all %}
+            <section class="question">
+                <h1 class="title">{{question.name}}</h1>
+                <div class="answer_container">
+                    {% for choice in question.odpowiedz_set.all %}
+                        <button class="answer" onclick="next(this, ({{choice.is_correct|yesno:"true,false"}}))">{{choice.name}}</button>
+                    {%endfor%}
+                </div>
+            </section>
+        {%endfor%}
+
+
+
+        <p id="end">Wow!</p>
+    </main>
+</body>
+</html>
