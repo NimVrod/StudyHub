@@ -100,3 +100,9 @@ body {
         opacity: 0.5;
     }
 }
+
+.title {
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    color: orange;
+}

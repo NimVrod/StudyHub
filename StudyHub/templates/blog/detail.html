@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/detail.css' %}">
+</head>
+<body>
+    <h1>Detail</h1>
+    <main>
+        <div class="blog-detail">
+            <h2 class="blog-title">{{ blog.title }}</h2>
+            <div class="gallery">
+                <img class="thumbnail" src="{{ blog.thumbnail.url }}" alt="{{ blog.title }}">
+                {% for image in gallery %}
+                    <img src="{{ image.image.url }}" alt="{{ image.alt }}">
+                {% endfor %}
+            </div>
+            <p class="content">{{ blog.body }}</p>
+            <p class="date">{{ blog.created_at }}</p>
+        </div>
+    </main>
+
+</body>
+</html>

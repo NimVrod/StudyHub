@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Add user</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'GG/add_user.css' %}">
+    <link rel="stylesheet" href="{% static 'GG/add.css' %}">
 
 </head>
 <body>
-    <h1>Add a dead gamer</h1>
+    <h1 class="title">Add a dead gamer</h1>
     <div class="form-container">
         <form action="/GG/adduser/" method="POST">
             {%  csrf_token %}

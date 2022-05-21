@@ -1,0 +1,57 @@
+.form-container {
+    background: rgba(155, 183, 212, 0.15);
+    border-radius: 25px;
+    margin: 5% 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: orange;
+    font-family: 'Roboto', sans-serif;
+}
+
+form {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: white;
+    font-size: 22px;
+    padding: 20px;
+}
+
+body {
+    background: #363945;
+}
+
+input {
+    background: rgba(155, 183, 212, 0.15);
+    border: none;
+}
+textarea {
+    background: rgba(155, 183, 212, 0.15);
+    border: none;
+}
+
+select {
+    background: rgba(155, 183, 212, 0.15);
+    border: none;
+}
+
+button {
+    background: rgba(155, 183, 212, 0.15);
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+label {
+    color: orange;
+}

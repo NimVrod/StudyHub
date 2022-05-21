@@ -1,0 +1,35 @@
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.blog-item {
+    background-repeat: no-repeat;
+    height: 300px;
+    cursor: pointer;
+    transition: transform .2s;
+    border-radius: 1em;
+    margin: 0;
+}
+
+.blog-item:hover {
+    transform: scale(1.01);
+}
+
+.title  {
+    color: white;
+    mix-blend-mode: difference;
+    font-size: 40px;
+}
+
+.summary {
+    color: white;
+    mix-blend-mode: difference;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+body {
+    background: #363945;
+}
